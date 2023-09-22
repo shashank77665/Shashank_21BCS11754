@@ -1,0 +1,35 @@
+{
+    "name": "Adblocker",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Adblocker",
+    "permissions": [
+        "declarativeNetRequest",
+        "activeTab",
+        "storage",
+        "scripting",
+        "webNavigation"
+    ],
+    "background": {
+        "service_worker": "javascript.js"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "my_ruleset",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "action": {
+        "default_title": "AdBlocker Settings",
+        "default_popup": "popup.html"
+      },
+    "icons": {
+        "16": "/assets/ADS_16x16.png",    
+        "48": "/assets/ADS_48x48.png",   
+        "128": "/assets/ADS_128x128.png"   
+    }
+}
+
